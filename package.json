@@ -1,0 +1,16 @@
+{
+  "name": "expo-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:android": "expo start ./packages/mobile --android",
+    "dev:web": "vite ./packages/web"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
