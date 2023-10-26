@@ -12,5 +12,12 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
+  }
 }
