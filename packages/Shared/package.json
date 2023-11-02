@@ -2,5 +2,9 @@
   "name": "@expo-monorepo/shared",
   "version": "1.0.0",
   "main": "index.ts",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nativewind": "^2.0.11",
+    "@expo-monorepo/shared": "*"
+  }
 }
