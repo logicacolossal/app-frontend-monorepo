@@ -2,9 +2,9 @@ import { SignIn } from './Pages/Authentication/SignIn';
 
 function App() {
   return (
-    <div className="flex h-screen px-8 py-12 bg-zinc-100">
+    <main className="flex justify-center h-screen px-8 py-12 bg-zinc-100">
       <SignIn />
-    </div>
+    </main>
   );
 }
 
