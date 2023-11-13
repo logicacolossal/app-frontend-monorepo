@@ -1,5 +1,5 @@
 {
-  "name": "@expo-monorepo/mobile",
+  "name": "@app-monorepo/mobile",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@expo-monorepo/shared": "*",
+    "@app-monorepo/shared": "*",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "nativewind": "^2.0.11",

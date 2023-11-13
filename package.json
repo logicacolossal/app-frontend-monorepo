@@ -1,5 +1,5 @@
 {
-  "name": "expo-monorepo",
+  "name": "app-monorepo",
   "version": "1.0.0",
   "scripts": {
     "dev:mobile": "expo start ./packages/mobile",

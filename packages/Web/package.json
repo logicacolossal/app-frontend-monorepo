@@ -1,5 +1,5 @@
 {
-  "name": "@expo-monorepo/web",
+  "name": "@app-monorepo/web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@expo-monorepo/shared": "*",
+    "@app-monorepo/shared": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native-web": "^0.19.9",
