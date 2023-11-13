@@ -1,17 +1,14 @@
-import { SignIn } from '@expo-monorepo/shared';
+import { SignInFragment } from '@expo-monorepo/shared/src/fragments';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SignInFormData } from '@expo-monorepo/shared/Fragments/SignIn/SignInForm';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { SignInFormData } from '@expo-monorepo/shared/src/fragments/SignIn/SignInForm';
 
 export default function App() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<SignInFormData>({
-    resolver: zodResolver(SignIn.Schema),
+  const { control, handleSubmit } = useForm({
+    defaultValues: SignInFragment.Schema.getDefault(),
+    resolver: yupResolver(SignInFragment.Schema),
   });
 
   function handleSignIn(data: SignInFormData) {
@@ -21,10 +18,9 @@ export default function App() {
   return (
     <View className="flex-1 px-8 py-12 items-center justify-center">
       <StatusBar />
-      <SignIn.Form
-        register={register}
+      <SignInFragment.Form
+        control={control}
         onSubmit={handleSubmit(handleSignIn)}
-        errors={errors}
       />
     </View>
   );

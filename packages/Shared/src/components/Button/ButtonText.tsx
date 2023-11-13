@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '@expo-monorepo/shared/lib/nativewind';
+import { Text } from '@expo-monorepo/shared/src/lib/nativewind';
 import { TextProps } from 'react-native';
 import clsx from 'clsx';
 

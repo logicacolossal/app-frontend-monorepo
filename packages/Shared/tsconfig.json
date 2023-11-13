@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "strictFunctionTypes": false,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {}
   }
 }

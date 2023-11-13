@@ -1,15 +1,11 @@
-import { SignIn as SingInFragment } from '@expo-monorepo/shared';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SignInFormData } from '@expo-monorepo/shared/Fragments/SignIn/SignInForm';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { SignInFragment } from '@expo-monorepo/shared/src/fragments';
+import { SignInFormData } from '@expo-monorepo/shared/src/fragments/SignIn/SignInForm';
 
 export function SignIn() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<SignInFormData>({
-    resolver: zodResolver(SingInFragment.Schema),
+  const { control, handleSubmit } = useForm<SignInFormData>({
+    resolver: yupResolver(SignInFragment.Schema),
   });
 
   function handleSignIn(data: SignInFormData) {
@@ -17,11 +13,10 @@ export function SignIn() {
   }
 
   return (
-    <div className="w-1/3 flex">
-      <SingInFragment.Form
-        register={register}
+    <div className="w-2/3 lg:w-1/3 flex">
+      <SignInFragment.Form
+        control={control}
         onSubmit={handleSubmit(handleSignIn)}
-        errors={errors}
       />
     </div>
   );

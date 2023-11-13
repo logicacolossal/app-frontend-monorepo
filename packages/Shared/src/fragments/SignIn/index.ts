@@ -1,6 +1,6 @@
 import { SignInForm, SignInFormSchema } from './SignInForm';
 
-export const SignIn = {
+export const SignInFragment = {
   Form: SignInForm,
   Schema: SignInFormSchema,
 };

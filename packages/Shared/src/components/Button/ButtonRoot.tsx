@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from '@expo-monorepo/shared/lib/nativewind';
+import { TouchableOpacity } from '@expo-monorepo/shared/src/lib/nativewind';
 import { TouchableOpacityProps } from 'react-native';
 import clsx from 'clsx';
 
